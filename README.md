@@ -10,7 +10,7 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-Mozilla Firefox must be installed before running the tests.
+Перед запуском тестов необходимо установить браузер Mozilla Firefox.
 
 ## Запуск тестов
 
