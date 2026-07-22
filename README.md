@@ -1,7 +1,5 @@
 # Sprint_6
 
-UI-tests for the Yandex Scooter training service.
-
 UI-тесты для учебного сервиса Яндекс Самокат.
 
 ## Установка
