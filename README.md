@@ -19,7 +19,6 @@ pytest --alluredir=allure_results
 ```
 
 ## Генерация отчета Allure
-
 ```bash
 allure generate allure_results -o allure_report --clean
 ```
