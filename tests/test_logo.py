@@ -1,5 +1,4 @@
 import allure
-from selenium.webdriver.support import expected_conditions as EC
 
 from pages.main_page import MainPage
 
@@ -14,8 +13,7 @@ class TestLogo:
 
         main_page.click_scooter_logo()
 
-        main_page.wait.until(EC.url_to_be(MainPage.URL))
-        assert driver.current_url == MainPage.URL
+        assert main_page.is_main_page_opened()
 
     def test_yandex_logo_opens_dzen_in_new_window(self, driver):
         main_page = MainPage(driver)
@@ -23,5 +21,4 @@ class TestLogo:
 
         main_page.click_yandex_logo()
 
-        main_page.wait.until(lambda browser: "dzen.ru" in browser.current_url)
-        assert "dzen.ru" in driver.current_url
+        assert main_page.is_dzen_page_opened()

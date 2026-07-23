@@ -22,6 +22,11 @@ class BasePage:
     def click(self, locator):
         self.find_clickable(locator).click()
 
+    @allure.step("Click element with JavaScript")
+    def click_with_js(self, locator):
+        element = self.find_visible(locator)
+        self.driver.execute_script("arguments[0].click();", element)
+
     @allure.step("Type text")
     def type_text(self, locator, text):
         element = self.find_visible(locator)
@@ -39,3 +44,22 @@ class BasePage:
 
     def current_url(self):
         return self.driver.current_url
+
+    def click_page_body(self, locator):
+        self.driver.find_element(*locator).click()
+
+    def switch_to_new_window(self, old_handles):
+        self.wait.until(EC.new_window_is_opened(old_handles))
+        new_handle = next(
+            handle for handle in self.driver.window_handles if handle not in old_handles
+        )
+        self.driver.switch_to.window(new_handle)
+
+    def get_window_handles(self):
+        return self.driver.window_handles
+
+    def wait_for_url(self, url):
+        self.wait.until(EC.url_to_be(url))
+
+    def wait_for_url_part(self, url_part):
+        self.wait.until(EC.url_contains(url_part))
