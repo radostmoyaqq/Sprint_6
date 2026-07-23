@@ -10,33 +10,27 @@ FAQ_DATA = [
 ]
 
 
-ORDER_DATA = [
-    (
-        "top",
-        {
-            "first_name": "Иван",
-            "last_name": "Петров",
-            "address": "Москва, Ленина 1",
-            "metro": "Сокольники",
-            "phone": "+79991234567",
-            "date": "25.07.2026",
-            "period": "сутки",
-            "color": "black",
-            "comment": "Позвоните за час",
-        },
-    ),
-    (
-        "bottom",
-        {
-            "first_name": "Анна",
-            "last_name": "Смирнова",
-            "address": "Москва, Тверская 10",
-            "metro": "Черкизовская",
-            "phone": "+79997654321",
-            "date": "26.07.2026",
-            "period": "двое суток",
-            "color": "grey",
-            "comment": "Домофон не работает",
-        },
-    ),
-]
+TOP_ORDER_DATA = {
+    "first_name": "Иван",
+    "last_name": "Петров",
+    "address": "Москва, Ленина 1",
+    "metro": "Сокольники",
+    "phone": "+79991234567",
+    "date": "25.07.2026",
+    "period": "сутки",
+    "color": "black",
+    "comment": "Позвоните за час",
+}
+
+
+BOTTOM_ORDER_DATA = {
+    "first_name": "Анна",
+    "last_name": "Смирнова",
+    "address": "Москва, Тверская 10",
+    "metro": "Черкизовская",
+    "phone": "+79997654321",
+    "date": "26.07.2026",
+    "period": "двое суток",
+    "color": "grey",
+    "comment": "Домофон не работает",
+}
